@@ -20,5 +20,7 @@ int				ft_printf(const char *format, ...)
 	va_start(list, format);
 	printf_return = case_hundler(format, list, 0);
 	va_end(list);
+	if (printf_return < 0)
+		return (-1);
 	return (printf_return);
 }
